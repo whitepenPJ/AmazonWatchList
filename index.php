@@ -10,9 +10,9 @@
 		$ASIN_ID = $_POST["txtSearch"];
 		require_once('AmazonAPI.php');
 
-		$keyId      = 'AKIAIAT4M5PXLMBFEFDA';
-		$secretKey  = '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';
-		$associateId    = 'amawatlis-20';
+		$keyId      = '';
+		$secretKey  = '';
+		$associateId    = '';
 
 		$amazonAPI = new AmazonAPI( $keyId, $secretKey, $associateId );
 		$amazonAPI->SetSSL(true);
@@ -25,26 +25,5 @@
 			$img = $key['mediumImage'];
 			echo "<br><img src=$img>";
 		}
-		//echo $items[0]->;
-
-		// $timestamp = gmdate("Y-m-d\TH:i:s\Z");
-		// $webService = "http://webservices.amazon.com/onca/xml?"
-		// 				. "Service=AWSECommerceService"
-		// 				. "&AWSAccessKeyId=$keyId"
-		// 				. "&Operation=ItemLookup"
-		// 				. "&ItemId=$ASIN_ID";
-		// 				. "&Timestamp=$timestamp"
-		// 				. "Signature=[Request Signature]";
-		// echo $webService;
-		
-		
-		// $request = "http://webservices.amazon.com/onca/xml?Service=AWSECommerceService&AWSAccessKeyId=AKIAITJQRVV5IREOXBVA&Operation=ItemLookup&ItemId=B00OQVZDJM&Timestamp=$Timestamp&Signature=[Request Signature]";
-
-		// GET
-		// webservices.amazon.com
-		// /onca/xml
-		// AWSAccessKeyId=AKIAITJQRVV5IREOXBVA&ItemId=B00OQVZDJM&Operation=ItemLookup&Service=AWSECommerceService&Timestamp=$Timestamp
-
-
 	}
 ?>
